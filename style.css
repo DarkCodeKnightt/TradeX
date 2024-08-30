@@ -1,0 +1,162 @@
+/* Navbar */
+.navbar {
+  background-color: #343a40;
+}
+
+.navbar-brand img {
+  height: 65px;
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: bold;
+}
+
+/* Carousel */
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+.carousel-caption h3,
+.carousel-caption p {
+  color: #fff;
+}
+
+/* News Cards */
+.card {
+  margin-bottom: 20px;
+  
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Testimonial section styling */
+.testimonial-section {
+  padding: 50px 0;
+  background-image: url('testimonial-background.jpg'); 
+  background-size: cover;
+  background-position: center;
+}
+
+.testimonial-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Testimonial text styling */
+.testimonial {
+  background-color: rgba(255, 255, 255, 0.8); 
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+}
+
+.testimonial img {
+  border-radius: 50%; 
+  width: 150px; 
+  margin-bottom: 20px;
+}
+
+.testimonial p {
+  font-style: italic;
+}
+
+.testimonial h3 {
+  color: #343a40; 
+}
+
+/* About us section styling */
+#about-us {
+  padding: 50px 0;
+}
+
+#about-us .container {
+  text-align: center;
+}
+
+#about-us h2 {
+  color: #343a40;
+}
+
+#about-us p {
+  color: #343a40; 
+}
+
+/* footer */
+.site-footer {
+  background-color: #26272b;
+  padding: 45px 0 20px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #737373;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+
+.site-footer h6 {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 5px;
+  letter-spacing: 2px;
+}
+
+.site-footer p {
+  color: #737373;
+}
+
+.footer-links a {
+  color: #737373;
+}
+
+.footer-links a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-icons a {
+  color: #818a91;
+  font-size: 16px;
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  margin-right: 8px;
+  border-radius: 100%;
+  transition: all 0.2s linear;
+}
+
+.social-icons a.facebook:hover {
+  background-color: #3b5998;
+}
+
+.social-icons a.twitter:hover {
+  background-color: #00aced;
+}
+
+.social-icons a.instagram:hover {
+  background-color: #ea4c89;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Slide effect for cards */
+.card-container {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.card-container:hover .card {
+  transform: translateY(-5px); /* Match the card hover animation */
+}
+
+.card-container:hover .card:hover {
+  transform: translateY(-10px); /* Match the hovered card hover animation */
+}

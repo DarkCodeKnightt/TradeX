@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TradeX :- Price tracking website for cryptoassets</title>
+    <!-- Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+      <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand ms-auto" href="#"><img src="logo.png" alt="" height="65"></a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="price_tracking.html">Price</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="nft_marketplace.html">NFT Marketplace</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#learn">Learn</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-warning me-2" href="login.html" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-success" href="signup.html" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form onsubmit="logIn(); return false;">
+          <div class="mb-3">
+            <label for="loginEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="loginPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="loginPassword">
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Signup Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form onsubmit="signUp(); return false;">
+          <div class="mb-3">
+            <label for="signupEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="signupEmail" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="signupPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="signupPassword">
+          </div>
+          <button type="submit" class="btn btn-success">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <br><br>
+
+      <!-- Carousel -->
+  <div id="demo" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="c1.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+          <h3>TradeX</h3>
+          <p>Price Tracking Website For Crypto Assets</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="c2.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="c3.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <br> <br>
+    <!-- News Section -->
+  <div class="container-fluid mt-4">
+    <h2 class="text mb-4">Latest Crypto News</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <img src="c2.jpg" alt="" height="100%" width="100%">
+            <br><br>
+            <h5 class="card-title">Bitcoin | Armed and Dangerous</h5>
+            <p class="card-text">There was the time, when one investor decided to invest in a single stock. That investor was one of the victims of The Great Depression.</p>
+            <p class="text-end" style="color: #8e8d8d; ">- Dev K</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <img src="news1.jpeg" alt="" height="100%" width="100%">
+            <br><br>
+            <h5 class="card-title">Shib</h5>
+            <p class="card-text">Shiba Inu Burn Rate Soars 840% As SHIB Price Hits 2-Year High, What’s Next?</p>
+            <p class="text-end" style="color: #8e8d8d; ">- Mann Patel</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <img src="news2.jpeg" alt="" height="100%" width="100%">
+            <br><br>
+            <h5 class="card-title">Robinhood</h5>
+            <p class="card-text">3 Trillion SHIB Moved to Robinhood Address as Shiba Inu Price Makes 70% Jump</p>
+            <p class="text-end" style="color: #8e8d8d; ">- Raj Patel</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    
+    <hr>
+    
+    <br>
+
+       <!-- Learn Section -->
+       <div id="learn">
+        <h2 class="text mb-4">Learn</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/JZk6T1TmIrs" title="What is CryptoCurrency? | Everything About Bitcoin &amp; Cryptocurrencies Explained for Beginners" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h5 class="card-title">What is CryptoCurrency?</h5>
+                <p class="card-text">Learn about the basics of cryptocurrency, including what it is, how it works, and why it's important.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/PdduvP_KlcI" title="Beginners Guide On How to Buy Crypto in India | Investing in Gold and Bitcoin | CA Rachana Ranade" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h5 class="card-title">How to Invest in Cryptocurrencies</h5>
+                <p class="card-text">Discover step-by-step instructions on how to invest in Cryptocurrencies.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/SzAuB2FG79A" title="Bitcoin explained: How do cryptocurrencies work? - BBC News" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h5 class="card-title">How do Cryptocurrencies work?</h5>
+                <p class="card-text">Explore the fundamentals of cryptocurrencies and unravel the complexities behind their functioning. Dive into the world of digital assets and gain insights into the mechanisms driving this revolutionary technology.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+  
+  <br>
+        <hr>
+  <br>
+  <!-- Testimonial -->
+<section class="testimonial-section" style="background-color: #f8f9fa; padding: 50px 0;">
+  <div class="container">
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="testimonial text-center">
+            <img src="Testimonial/pic-1.png" alt="testimonial" style="border-radius: 50%; width: 150px;">
+            <p style="font-style: italic;">"TradeX has revolutionized the way I approach investments. I've achieved remarkable results with their intuitive platform."</p>
+            <h3 style="color: #343a40;">Shane Watson</h3>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="testimonial text-center">
+            <img src="Testimonial/pic-2.png" alt="testimonial" style="border-radius: 50%; width: 150px;">
+            <p style="font-style: italic;">"As a seasoned trader, I've found TradeX to be a game-changer. The platform's analytics and insights have been invaluable."</p>
+            <h3 style="color: #343a40;">Emily Lee</h3>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="testimonial text-center">
+            <img src="Testimonial/pic-3.png" alt="testimonial" style="border-radius: 50%; width: 150px;">
+            <p style="font-style: italic;">"TradeX offers a comprehensive range of trading tools that cater to both beginners and advanced users. It's my go-to platform for financial success."</p>
+            <h3 style="color: #343a40;">David Martinez</h3>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+<hr>
+<br>
+<!-- About us -->
+<section id="about-us" style="background-color: #f8f9fa; padding: 50px 0;">
+  <div class="container">
+    <h2 style="color: #343a40; text-align: center;">About TradeX</h2>
+    <p style="color: #343a40; text-align: center;">Welcome to TradeX, your premier destination for online trading and investment solutions.</p>
+    <p style="color: #343a40; text-align: center;">At TradeX, we're committed to empowering individuals to achieve their financial goals through cutting-edge technology and expert guidance.</p>
+    <p style="color: #343a40; text-align: center;">Our platform provides users with access to a diverse range of financial instruments, including stocks, cryptocurrencies, forex, and commodities, all in one place.</p>
+    <p style="color: #343a40; text-align: center;">With TradeX, you'll benefit from advanced analytics, real-time market data, and personalized support to help you make informed investment decisions.</p>
+    <p style="color: #343a40; text-align: center;">Join TradeX today and embark on your journey towards financial success!</p>
+  </div>
+</section>
+<hr>
+<br>
+
+  
+          <!-- contact -->
+          <section id="contact" class="contact">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-6" style="border: 1px solid rgb(16, 56, 8);">
+                  <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <p><strong>Address:</strong> TradeX,Sarkhej - Gandhinagar Hwy, Makarba, Ahmedabad, Sarkhej-Okaf, Gujarat 382210</p>
+                    <p><strong>Phone:</strong> 1234567899</p>
+                    <p><strong>Email:</strong> info@TradeX.com</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <h2>Contact Us</h2>
+                  <form id="contact-form">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="email" class="form-control" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                      <textarea class="form-control" rows="5" placeholder="Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-outline-success">Send Message</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+    <br>
+          <hr>
+    <br>
+       <!-- Footer -->
+<footer class="site-footer mt-auto">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5" id="about">
+                <h6>About</h6>
+                <p class="text-justify">Welcome to TradeX, your premier destination for online trading and investment solutions.
+
+                  At TradeX, we're committed to empowering individuals to achieve their financial goals through cutting-edge technology and expert guidance.</p>
+            </div>
+            <div class="col-md-2">
+                <h6>Categories</h6>
+                <ul class="footer-links">
+                    <li><a href="price_tracking.html">price</a></li>
+                    <li><a href="nft_marketplace.html">NFT Marketplace</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h6>Quick Links</h6>
+                <ul class="footer-links">
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="col-md-3" id="about">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14691.543966085927!2d72.4884286!3d22.9912195!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9bc4ce73bf61%3A0x323634959dab072f!2sLJ%20University!5e0!3m2!1sen!2sin!4v1710939959962!5m2!1sen!2sin" width="350" height="290" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="padding: 50;"></iframe>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-12">
+                <p class="copyright-text">
+                  Copyright &copy; 2024 All Rights Reserved by TradeX
+                </p>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12">
+              <ul class="social-icons float-md-end list-inline">
+                <li class="list-inline-item"><a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="list-inline-item"><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a class="instagram" href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+            </div>
+        </div>
+    </div>
+  </footer>
+</body>
+</html>

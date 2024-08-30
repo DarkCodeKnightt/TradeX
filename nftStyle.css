@@ -1,0 +1,85 @@
+ /* Navbar */
+ .navbar {
+    background-color: #343a40;
+    }
+
+    .navbar-brand img {
+    height: 65px;
+    }
+
+    .navbar-nav .nav-link.active {
+    color: #fff;
+    font-weight: bold;
+    }
+    /* CSS for NFT Marketplace Section */
+
+    /* Styling for NFT card */
+    .card {
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    }
+
+    /* Hover effect for NFT card */
+    .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Optional: adds a subtle shadow */
+    }
+
+
+    /* footer */
+    .site-footer {
+    background-color: #26272b;
+    padding: 45px 0 20px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #737373;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    }
+
+    .site-footer h6 {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    letter-spacing: 2px;
+    }
+
+    .site-footer p {
+    color: #737373;
+    }
+
+    .footer-links a {
+    color: #737373;
+    }
+
+    .footer-links a:hover {
+    color: #fff;
+    text-decoration: none;
+    }
+
+    .social-icons a {
+    color: #818a91;
+    font-size: 16px;
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 100%;
+    transition: all 0.2s linear;
+    }
+
+    .social-icons a.facebook:hover {
+    background-color: #3b5998;
+    }
+
+    .social-icons a.twitter:hover {
+    background-color: #00aced;
+    }
+
+    .social-icons a.instagram:hover {
+    background-color: #ea4c89;
+    }
+
